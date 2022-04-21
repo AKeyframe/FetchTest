@@ -42,10 +42,9 @@ app.use('/a', accountController);
 
 //Index / Home route
 app.get('/', (req, res) => {
-    res.send('Fetch Backend Test'+"<br><br>"+
-    'For current balances go to /a/balances'+"<br>"+
-    'To add a transaction use /t/add/:payer/:points/:timestamp'+"<br>"+
-    'To spend points go to /t/spend');
+    res.send(`Fetch Backend Test
+    Use /a Get for account balaces - Delete to delete all accounts
+    Use /t Post to add a transaction, Put to spend, and Delete to delete all accounts `);
 });
 
 app.listen(PORT, () => console.log(`listening on PORT: ${PORT}`));
